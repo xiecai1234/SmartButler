@@ -16,6 +16,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
+import android.support.annotation.NonNull;
 import android.util.Base64;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ import java.io.ByteArrayOutputStream;
 public class UtilTools {
 
     //设置字体
-    public static void setFont(Context mContext, TextView textview) {
+    public static void setFont(@NonNull Context mContext, @NonNull TextView textview) {
         Typeface fontType = Typeface.createFromAsset(mContext.getAssets(), "fonts/FONT.TTF");
         textview.setTypeface(fontType);
     }
